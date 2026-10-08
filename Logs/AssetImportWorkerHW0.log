@@ -6,3 +6,709 @@ BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
 Date: 2026-10-08T18:14:41Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorkerHW0
+-projectPath
+C:/Users/VICTUS/Have Mercy on My Soul
+-logFile
+Logs/AssetImportWorkerHW0.log
+-srvPort
+64259
+-parentPid
+26112
+-analyticsCloudUserId
+anonymous
+-analyticsCloudProjectId
+3c1e8601-1bcb-4b15-bf7c-c197dd92ca87
+-analyticsLocalProjectId
+1e2cb63983ba17640a4de23c500204f1
+-licensingIpc
+LicenseClient-VICTUS
+-noDiagnosticSwitchPersistentStore
+-job-worker-count
+13
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+-force-d3d12
+-name
+AssetImport
+Successfully changed project path to: C:/Users/VICTUS/Have Mercy on My Soul
+C:/Users/VICTUS/Have Mercy on My Soul
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [2232]  Target information:
+
+Player connection [2232]  * "[IP] 192.168.30.65 [Port] 0 [Flags] 2 [Guid] 153870247 [EditorId] 153870247 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L00D3TP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [2232]  * "[IP] 169.254.31.247 [Port] 0 [Flags] 2 [Guid] 153870247 [EditorId] 153870247 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L00D3TP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [2232] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [2232] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 13
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 8.76 ms, found 5 plugins.
+Initialize engine version: 6000.5.2f1 (eb73d3b415a1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/VICTUS/Have Mercy on My Soul/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4070 Laptop GPU (ID=0x2820)
+    Vendor:          NVIDIA
+    VRAM:            7948 MB
+    App VRAM Budget: 7180 MB
+    Driver:          32.0.16.1714
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-VICTUS"
+[Licensing::IpcConnector] LicenseClient-VICTUS channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-VICTUS-6000.5.2" at "2026-10-08T18:14:43.040684Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 37124, path: "C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              27588dcb6cf341159f2d0ac50fe30fe1
+  Correlation Id:          48f394fd3cf0ae3a8767525389bd2bb5
+  External correlation Id: 577859602528733916
+  Machine Id:              1Csj7QVJHT49lh/aJMiEOnqW+2w=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-VICTUS-6000.5.2" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-VICTUS-6000.5.2-notifications" at "2026-10-08T18:14:43.0480628Z"
+[Licensing::Module] Licensing Background thread has ended after 1.75s
+CodeReloadManager initialized
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002402 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.700 seconds
+Domain Reload Profiling: 1663ms
+	BeginReloadAssembly (205ms)
+	RebuildCommonClasses (6ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (106ms)
+	LoadAllAssembliesAndSetupDomain (624ms)
+		LoadAssemblies (200ms)
+		AnalyzeDomain (405ms)
+			TypeCache.Refresh (386ms)
+				TypeCache.ScanAssembly (355ms)
+	FinalizeReload (703ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (188ms)
+			ProcessInitializeOnLoadAttributes (200ms)
+			ProcessInitializeOnLoadMethodAttributes (191ms)
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 7972431499572-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+========================================================================
+Worker process is ready to serve import requests
+Curl error 3: URL rejected: Malformed input to a URL function
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 5.74 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 3.57 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.27 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.330 seconds
+Domain Reload Profiling: 4666ms
+	BeginReloadAssembly (312ms)
+		DisableScriptedObjects (7ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (10ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (158ms)
+	LoadAllAssembliesAndSetupDomain (1834ms)
+		LoadAssemblies (887ms)
+		AnalyzeDomain (884ms)
+			TypeCache.Refresh (667ms)
+				TypeCache.ScanAssembly (636ms)
+			BuildScriptInfoCaches (204ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (2331ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (159ms)
+			ProcessInitializeOnLoadAttributes (1197ms)
+			ProcessInitializeOnLoadMethodAttributes (689ms)
+			AfterProcessingInitializeOnLoad (9ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+AcceleratorClientConnectionCallback - disconnected - :0
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 3.80 ms, found 5 plugins.
+Unloading 87 Unused Serialized files (Serialized files now loaded: 0)
+Curl error 3: URL rejected: Malformed input to a URL function
+Unloading 12513 unused Assets / (26.1 MB). Loaded Objects now: 13697.
+Memory consumption went from 0.71 GB to 0.68 GB.
+Total: 23.948900 ms (FindLiveObjects: 0.872400 ms CreateObjectMapping: 4.618400 ms MarkObjects: 13.218100 ms  DeleteObjects: 5.237400 ms)
+
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 4.29 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 82 unused Assets / (16.2 MB). Loaded Objects now: 13697.
+Memory consumption went from 0.70 GB to 0.68 GB.
+Total: 17.586000 ms (FindLiveObjects: 0.522300 ms CreateObjectMapping: 2.345800 ms MarkObjects: 12.812200 ms  DeleteObjects: 1.904600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-10-08T18:17:50.5060622Z
+  Time since last request: 8839.16288069999973 seconds.
+  importAddress: GUID: 97ef531f8e9fb134f91fbbc02f708e40 - Path: Assets/scripts/Bullet.cs - Importer: PreviewImporter
+Importing 'GUID: 97ef531f8e9fb134f91fbbc02f708e40 - Path: Assets/scripts/Bullet.cs - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 97ef531f8e9fb134f91fbbc02f708e40' -> (Import Result ID: '2b95efdf312b4aeeb122c0cc2b49bdae') in 0.008 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=325e9a87e2d5b1f03b379faa99d5abd8 DependenciesID=0a113d4c845f59a90567cfc27ee12a23 StaticDependenciesID=b366d9d22da4c6c07348ba1407098318 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 13.89 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 11.47 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  4.187 seconds
+Domain Reload Profiling: 7748ms
+	BeginReloadAssembly (598ms)
+		DisableScriptedObjects (16ms)
+		CreateAndSetChildDomain (178ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (36ms)
+	initialDomainReloadingComplete (289ms)
+	LoadAllAssembliesAndSetupDomain (2619ms)
+		LoadAssemblies (1451ms)
+		AnalyzeDomain (882ms)
+			TypeCache.Refresh (34ms)
+			BuildScriptInfoCaches (826ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (4189ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (303ms)
+			ProcessInitializeOnLoadAttributes (1971ms)
+			ProcessInitializeOnLoadMethodAttributes (1190ms)
+			AfterProcessingInitializeOnLoad (26ms)
+		AwakeInstancesAfterBackupRestoration (36ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 10.99 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12511 unused Assets / (26.9 MB). Loaded Objects now: 13756.
+Memory consumption went from 0.74 GB to 0.71 GB.
+Total: 57.771800 ms (FindLiveObjects: 2.527100 ms CreateObjectMapping: 11.475300 ms MarkObjects: 32.212400 ms  DeleteObjects: 11.554600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 9.24 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 12.52 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.712 seconds
+Domain Reload Profiling: 7014ms
+	BeginReloadAssembly (597ms)
+		DisableScriptedObjects (14ms)
+		CreateAndSetChildDomain (206ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (31ms)
+	initialDomainReloadingComplete (267ms)
+	LoadAllAssembliesAndSetupDomain (2387ms)
+		LoadAssemblies (1316ms)
+		AnalyzeDomain (824ms)
+			TypeCache.Refresh (29ms)
+			BuildScriptInfoCaches (778ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (3715ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (278ms)
+			ProcessInitializeOnLoadAttributes (1805ms)
+			ProcessInitializeOnLoadMethodAttributes (1001ms)
+			AfterProcessingInitializeOnLoad (22ms)
+		AwakeInstancesAfterBackupRestoration (42ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 11.83 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12511 unused Assets / (25.8 MB). Loaded Objects now: 13759.
+Memory consumption went from 0.75 GB to 0.73 GB.
+Total: 68.189300 ms (FindLiveObjects: 2.539100 ms CreateObjectMapping: 13.541200 ms MarkObjects: 39.364400 ms  DeleteObjects: 12.742400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 4.47 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 4.50 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.990 seconds
+Domain Reload Profiling: 3612ms
+	BeginReloadAssembly (316ms)
+		DisableScriptedObjects (8ms)
+		CreateAndSetChildDomain (102ms)
+	RebuildCommonClasses (10ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (124ms)
+	LoadAllAssembliesAndSetupDomain (1153ms)
+		LoadAssemblies (612ms)
+		AnalyzeDomain (462ms)
+			TypeCache.Refresh (17ms)
+			BuildScriptInfoCaches (434ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1991ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (131ms)
+			ProcessInitializeOnLoadAttributes (986ms)
+			ProcessInitializeOnLoadMethodAttributes (599ms)
+			AfterProcessingInitializeOnLoad (10ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 5.81 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12511 unused Assets / (25.9 MB). Loaded Objects now: 13762.
+Memory consumption went from 0.78 GB to 0.75 GB.
+Total: 31.512900 ms (FindLiveObjects: 1.205700 ms CreateObjectMapping: 7.124100 ms MarkObjects: 16.143300 ms  DeleteObjects: 7.038100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-10-08T18:47:57.0404237Z
+  Time since last request: 1806.49169740000002 seconds.
+  importAddress: GUID: 73c4d4988fac6db4e8d9bab1ae6392c3 - Path: Assets/scripts/Weapon.cs - Importer: PreviewImporter
+Importing 'GUID: 73c4d4988fac6db4e8d9bab1ae6392c3 - Path: Assets/scripts/Weapon.cs - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 73c4d4988fac6db4e8d9bab1ae6392c3' -> (Import Result ID: 'e500470639cbb167cf289ae034abb120') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e24c5edb4d48dc28dd8f5c1003399901 DependenciesID=b4c42eaea678c3725abae7471e541797 StaticDependenciesID=9401687b2d2a66929284a73e9ea4beeb 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 8.61 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12485 unused Assets / (25.3 MB). Loaded Objects now: 13762.
+Memory consumption went from 0.78 GB to 0.75 GB.
+Total: 49.056800 ms (FindLiveObjects: 2.006700 ms CreateObjectMapping: 11.007700 ms MarkObjects: 26.134300 ms  DeleteObjects: 9.906600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-10-08T18:49:04.8385604Z
+  Time since last request: 67.75804770000001 seconds.
+  importAddress: GUID: 73c4d4988fac6db4e8d9bab1ae6392c3 - Path: Assets/scripts/Weapon.cs - Importer: PreviewImporter
+Importing 'GUID: 73c4d4988fac6db4e8d9bab1ae6392c3 - Path: Assets/scripts/Weapon.cs - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 73c4d4988fac6db4e8d9bab1ae6392c3' -> (Import Result ID: '3872269072c0dbc9859b8403799f79eb') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e24c5edb4d48dc28dd8f5c1003399901 DependenciesID=e5624cf8be225626151e733f2b711494 StaticDependenciesID=5f43f8cb4d405b1ff1531e469eb6e4eb 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 5.35 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 4.43 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.115 seconds
+Domain Reload Profiling: 3980ms
+	BeginReloadAssembly (351ms)
+		DisableScriptedObjects (8ms)
+		CreateAndSetChildDomain (114ms)
+	RebuildCommonClasses (11ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (140ms)
+	LoadAllAssembliesAndSetupDomain (1345ms)
+		LoadAssemblies (724ms)
+		AnalyzeDomain (532ms)
+			TypeCache.Refresh (20ms)
+			BuildScriptInfoCaches (498ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (2117ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (154ms)
+			ProcessInitializeOnLoadAttributes (1031ms)
+			ProcessInitializeOnLoadMethodAttributes (618ms)
+			AfterProcessingInitializeOnLoad (10ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 4.42 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12511 unused Assets / (25.6 MB). Loaded Objects now: 13765.
+Memory consumption went from 0.75 GB to 0.73 GB.
+Total: 27.424100 ms (FindLiveObjects: 1.063400 ms CreateObjectMapping: 5.012800 ms MarkObjects: 14.774800 ms  DeleteObjects: 6.571800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-10-08T18:54:19.0370315Z
+  Time since last request: 314.12241169999999 seconds.
+  importAddress: GUID: 73c4d4988fac6db4e8d9bab1ae6392c3 - Path: Assets/scripts/Weapon.cs - Importer: PreviewImporter
+Importing 'GUID: 73c4d4988fac6db4e8d9bab1ae6392c3 - Path: Assets/scripts/Weapon.cs - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 73c4d4988fac6db4e8d9bab1ae6392c3' -> (Import Result ID: 'a5919a6236db2d8756dc81044a29dca3') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e24c5edb4d48dc28dd8f5c1003399901 DependenciesID=f75dbe705f3119d022ed6307a91f67a3 StaticDependenciesID=e94e0d68cc868738c62d63e2bdf6a61e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 4.93 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12486 unused Assets / (24.8 MB). Loaded Objects now: 13766.
+Memory consumption went from 0.75 GB to 0.73 GB.
+Total: 38.587800 ms (FindLiveObjects: 1.406700 ms CreateObjectMapping: 6.732300 ms MarkObjects: 23.142100 ms  DeleteObjects: 7.304800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-10-08T19:02:31.6442889Z
+  Time since last request: 492.55837339999999 seconds.
+  importAddress: GUID: d6a0d4afd791f634c87f52e4e2d8b3a8 - Path: Assets/scripts/AmmoManager.cs - Importer: PreviewImporter
+Importing 'GUID: d6a0d4afd791f634c87f52e4e2d8b3a8 - Path: Assets/scripts/AmmoManager.cs - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: d6a0d4afd791f634c87f52e4e2d8b3a8' -> (Import Result ID: '9eb294950486ed181d28f46161d47108') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=84338f2e810eb32312e6c91481df2d5f DependenciesID=32ee8e1b2d93911d0fcd2ae9a9f06f06 StaticDependenciesID=cd420d280946199822aad3e9f7badbc5 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 14.12 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 13.30 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  4.937 seconds
+Domain Reload Profiling: 9233ms
+	BeginReloadAssembly (812ms)
+		DisableScriptedObjects (21ms)
+		CreateAndSetChildDomain (256ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (47ms)
+	initialDomainReloadingComplete (341ms)
+	LoadAllAssembliesAndSetupDomain (3070ms)
+		LoadAssemblies (1835ms)
+		AnalyzeDomain (1047ms)
+			TypeCache.Refresh (32ms)
+			BuildScriptInfoCaches (988ms)
+			ResolveRequiredComponents (22ms)
+	FinalizeReload (4940ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (394ms)
+			ProcessInitializeOnLoadAttributes (2295ms)
+			ProcessInitializeOnLoadMethodAttributes (1458ms)
+			AfterProcessingInitializeOnLoad (39ms)
+		AwakeInstancesAfterBackupRestoration (53ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 15.54 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12512 unused Assets / (26.1 MB). Loaded Objects now: 13769.
+Memory consumption went from 0.76 GB to 0.74 GB.
+Total: 71.144500 ms (FindLiveObjects: 2.987300 ms CreateObjectMapping: 19.031000 ms MarkObjects: 33.040400 ms  DeleteObjects: 16.083700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-10-08T19:03:03.0465633Z
+  Time since last request: 31.3482415 seconds.
+  importAddress: GUID: d6a0d4afd791f634c87f52e4e2d8b3a8 - Path: Assets/scripts/AmmoManager.cs - Importer: PreviewImporter
+Importing 'GUID: d6a0d4afd791f634c87f52e4e2d8b3a8 - Path: Assets/scripts/AmmoManager.cs - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: d6a0d4afd791f634c87f52e4e2d8b3a8' -> (Import Result ID: '0a02bd7f646b9b580056a581cf7ce36e') in 0.008 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=84338f2e810eb32312e6c91481df2d5f DependenciesID=84f47abdd57dd646710816d95d4e4ce9 StaticDependenciesID=cd420d280946199822aad3e9f7badbc5 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 3.85 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 4.02 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.986 seconds
+Domain Reload Profiling: 3819ms
+	BeginReloadAssembly (357ms)
+		DisableScriptedObjects (8ms)
+		CreateAndSetChildDomain (122ms)
+	RebuildCommonClasses (11ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (149ms)
+	LoadAllAssembliesAndSetupDomain (1297ms)
+		LoadAssemblies (708ms)
+		AnalyzeDomain (517ms)
+			TypeCache.Refresh (19ms)
+			BuildScriptInfoCaches (486ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1987ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (140ms)
+			ProcessInitializeOnLoadAttributes (951ms)
+			ProcessInitializeOnLoadMethodAttributes (595ms)
+			AfterProcessingInitializeOnLoad (8ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 3.87 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12512 unused Assets / (24.3 MB). Loaded Objects now: 13772.
+Memory consumption went from 0.77 GB to 0.75 GB.
+Total: 24.834100 ms (FindLiveObjects: 0.933000 ms CreateObjectMapping: 4.720300 ms MarkObjects: 13.780500 ms  DeleteObjects: 5.399000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-10-08T19:05:05.584426Z
+  Time since last request: 122.4391955 seconds.
+  importAddress: GUID: d6a0d4afd791f634c87f52e4e2d8b3a8 - Path: Assets/scripts/AmmoManager.cs - Importer: PreviewImporter
+Importing 'GUID: d6a0d4afd791f634c87f52e4e2d8b3a8 - Path: Assets/scripts/AmmoManager.cs - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: d6a0d4afd791f634c87f52e4e2d8b3a8' -> (Import Result ID: 'c925c5e2c61bae715ff2e0a77554a78b') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=84338f2e810eb32312e6c91481df2d5f DependenciesID=ad8836344c625df9dc567cfe0cd83513 StaticDependenciesID=af78950c165b53a5ae727b6ca521a280 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Refreshing native plugins compatible for Editor in 4.27 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 4.80 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.488 seconds
+Domain Reload Profiling: 3619ms
+	BeginReloadAssembly (305ms)
+		DisableScriptedObjects (7ms)
+		CreateAndSetChildDomain (100ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (109ms)
+	LoadAllAssembliesAndSetupDomain (691ms)
+		LoadAssemblies (588ms)
+		AnalyzeDomain (27ms)
+			TypeCache.Refresh (12ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (2489ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (155ms)
+			ProcessInitializeOnLoadAttributes (1230ms)
+			ProcessInitializeOnLoadMethodAttributes (782ms)
+			AfterProcessingInitializeOnLoad (11ms)
+		AwakeInstancesAfterBackupRestoration (28ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 5.53 ms, found 5 plugins.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12512 unused Assets / (25.6 MB). Loaded Objects now: 13775.
+Memory consumption went from 0.77 GB to 0.74 GB.
+Total: 36.595000 ms (FindLiveObjects: 1.567100 ms CreateObjectMapping: 7.380700 ms MarkObjects: 19.703900 ms  DeleteObjects: 7.941800 ms)
+
+Prepare: number of updated asset objects reloaded= 0

@@ -1,0 +1,487 @@
+[2026-10-08T18:13:37.725Z][INFO] Command-line: 'C:\\Program Files\\Unity\\Hub\\Editor\\6000.5.2f1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe' server -s 26112 --ipc-path Unity-Upm-26112 -l 2 --log-file 'C:\\Users\\VICTUS\\Have Mercy on My Soul/Logs/upm.log'
+[2026-10-08T18:13:37.762Z][INFO] IPC server started (IPC path=Unity-Upm-26112).
+[2026-10-08T18:13:37.762Z][INFO] Hint: To connect to this UPM instance, launch Unity with the command-line parameter -upmIpcPath Upm-26112.
+[2026-10-08T18:14:01.219Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:01.434Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:01.444Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T18:14:02.869Z][INFO] config:project:get-registries --> 200 (1425 ms)
+[2026-10-08T18:14:03.665Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:03.665Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:03.722Z][INFO] project:list-packages --> 200 (2503 ms)
+[2026-10-08T18:14:03.730Z][INFO] project:list-packages --> 200 (2296 ms)
+[2026-10-08T18:14:30.200Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:30.221Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:30.602Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:30.639Z][INFO] project:list-packages --> 200 (439 ms)
+[2026-10-08T18:14:30.684Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:30.693Z][INFO] project:list-packages --> 200 (472 ms)
+[2026-10-08T18:14:36.546Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:36.869Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:36.877Z][INFO] project:list-packages --> 200 (331 ms)
+[2026-10-08T18:14:37.204Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T18:14:37.208Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T18:14:49.821Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:50.013Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:50.030Z][INFO] project:list-packages --> 200 (210 ms)
+[2026-10-08T18:14:50.481Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T18:14:51.090Z][INFO] packages:get-packageinfo --> 200 (609 ms)
+[2026-10-08T18:14:55.458Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:55.616Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:55.630Z][INFO] project:list-packages --> 200 (172 ms)
+[2026-10-08T18:14:55.858Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:56.031Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:56.041Z][INFO] project:list-packages --> 200 (183 ms)
+[2026-10-08T18:14:56.156Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:14:56.317Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:14:56.325Z][INFO] project:list-packages --> 200 (169 ms)
+[2026-10-08T18:16:16.828Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.collab-proxy"
+}
+[2026-10-08T18:16:17.338Z][INFO] packages:get-packageinfo --> 200 (510 ms)
+[2026-10-08T18:32:29.453Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:32:29.806Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:32:29.811Z][INFO] project:list-packages --> 200 (358 ms)
+[2026-10-08T18:32:31.259Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:32:31.581Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:32:31.589Z][INFO] project:list-packages --> 200 (330 ms)
+[2026-10-08T18:32:32.153Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T18:32:32.161Z][INFO] config:project:get-registries --> 200 (8 ms)
+[2026-10-08T18:32:35.406Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T18:32:35.950Z][INFO] packages:get-packageinfo --> 200 (544 ms)
+[2026-10-08T18:33:45.823Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:33:46.156Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:33:46.161Z][INFO] project:list-packages --> 200 (338 ms)
+[2026-10-08T18:33:47.692Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:33:48.059Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:33:48.076Z][INFO] project:list-packages --> 200 (384 ms)
+[2026-10-08T18:33:48.725Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T18:33:48.732Z][INFO] config:project:get-registries --> 200 (6 ms)
+[2026-10-08T18:33:51.115Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T18:33:51.620Z][INFO] packages:get-packageinfo --> 200 (505 ms)
+[2026-10-08T18:47:22.141Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:47:22.291Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:47:22.301Z][INFO] project:list-packages --> 200 (160 ms)
+[2026-10-08T18:47:22.926Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:47:23.093Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:47:23.102Z][INFO] project:list-packages --> 200 (176 ms)
+[2026-10-08T18:47:23.419Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T18:47:23.423Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T18:47:24.636Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T18:47:25.121Z][INFO] packages:get-packageinfo --> 200 (485 ms)
+[2026-10-08T18:54:11.372Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:54:11.533Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:54:11.549Z][INFO] project:list-packages --> 200 (177 ms)
+[2026-10-08T18:54:12.249Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T18:54:12.432Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T18:54:12.434Z][INFO] project:list-packages --> 200 (185 ms)
+[2026-10-08T18:54:12.815Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T18:54:12.819Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T18:54:14.315Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T18:54:14.810Z][INFO] packages:get-packageinfo --> 200 (495 ms)
+[2026-10-08T19:02:45.083Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:02:45.454Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:02:45.461Z][INFO] project:list-packages --> 200 (378 ms)
+[2026-10-08T19:02:47.142Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:02:47.513Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:02:47.531Z][INFO] project:list-packages --> 200 (389 ms)
+[2026-10-08T19:02:48.090Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:02:48.097Z][INFO] config:project:get-registries --> 200 (8 ms)
+[2026-10-08T19:02:51.393Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:02:51.953Z][INFO] packages:get-packageinfo --> 200 (560 ms)
+[2026-10-08T19:04:58.241Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:04:58.396Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:04:58.403Z][INFO] project:list-packages --> 200 (162 ms)
+[2026-10-08T19:04:59.127Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:04:59.283Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:04:59.295Z][INFO] project:list-packages --> 200 (168 ms)
+[2026-10-08T19:04:59.659Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:04:59.662Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T19:05:01.093Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:05:01.551Z][INFO] packages:get-packageinfo --> 200 (458 ms)
+[2026-10-08T19:05:32.623Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:05:32.755Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:05:32.765Z][INFO] project:list-packages --> 200 (142 ms)
+[2026-10-08T19:05:33.435Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:05:33.579Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:05:33.585Z][INFO] project:list-packages --> 200 (151 ms)
+[2026-10-08T19:05:33.957Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:05:33.961Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T19:05:37.017Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:05:37.468Z][INFO] packages:get-packageinfo --> 200 (451 ms)
+[2026-10-08T19:06:41.849Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:06:41.991Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:06:41.996Z][INFO] project:list-packages --> 200 (147 ms)
+[2026-10-08T19:06:42.635Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:06:42.771Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:06:42.778Z][INFO] project:list-packages --> 200 (143 ms)
+[2026-10-08T19:06:43.125Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:06:43.128Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T19:06:44.446Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:06:44.914Z][INFO] packages:get-packageinfo --> 200 (468 ms)
+[2026-10-08T19:07:23.567Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:07:23.716Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:07:23.720Z][INFO] project:list-packages --> 200 (153 ms)
+[2026-10-08T19:07:24.382Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:07:24.551Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:07:24.560Z][INFO] project:list-packages --> 200 (178 ms)
+[2026-10-08T19:07:24.893Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:07:24.897Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T19:07:28.211Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:07:28.655Z][INFO] packages:get-packageinfo --> 200 (444 ms)
+[2026-10-08T19:08:21.262Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:08:21.409Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:08:21.416Z][INFO] project:list-packages --> 200 (154 ms)
+[2026-10-08T19:08:23.173Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:08:23.853Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:08:23.864Z][INFO] project:list-packages --> 200 (691 ms)
+[2026-10-08T19:08:24.252Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:08:24.259Z][INFO] config:project:get-registries --> 200 (7 ms)
+[2026-10-08T19:08:25.952Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:08:26.443Z][INFO] packages:get-packageinfo --> 200 (491 ms)
+[2026-10-08T19:08:32.324Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:08:32.521Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:08:32.528Z][INFO] project:list-packages --> 200 (204 ms)
+[2026-10-08T19:08:33.323Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:08:33.491Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:08:33.494Z][INFO] project:list-packages --> 200 (171 ms)
+[2026-10-08T19:08:33.900Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:08:33.903Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T19:08:37.221Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:08:37.243Z][INFO] packages:get-packageinfo --> 200 (22 ms)
+[2026-10-08T19:31:44.067Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:31:44.257Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:31:44.260Z][INFO] project:list-packages --> 200 (193 ms)
+[2026-10-08T19:31:45.084Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:31:45.298Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:31:45.301Z][INFO] project:list-packages --> 200 (218 ms)
+[2026-10-08T19:31:45.742Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:31:45.748Z][INFO] config:project:get-registries --> 200 (6 ms)
+[2026-10-08T19:31:47.423Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:31:48.049Z][INFO] packages:get-packageinfo --> 200 (626 ms)
+[2026-10-08T19:32:38.433Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:32:38.597Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:32:38.603Z][INFO] project:list-packages --> 200 (170 ms)
+[2026-10-08T19:32:39.368Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:32:39.530Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:32:39.540Z][INFO] project:list-packages --> 200 (172 ms)
+[2026-10-08T19:32:39.951Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:32:39.955Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T19:32:43.552Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:32:43.975Z][INFO] packages:get-packageinfo --> 200 (423 ms)
+[2026-10-08T19:38:42.648Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:38:42.845Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:38:42.848Z][INFO] project:list-packages --> 200 (200 ms)
+[2026-10-08T19:38:43.710Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:38:43.917Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:38:43.926Z][INFO] project:list-packages --> 200 (216 ms)
+[2026-10-08T19:38:44.379Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:38:44.383Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T19:38:48.226Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:38:48.764Z][INFO] packages:get-packageinfo --> 200 (538 ms)
+[2026-10-08T19:54:46.971Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:54:47.135Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:54:47.139Z][INFO] project:list-packages --> 200 (168 ms)
+[2026-10-08T19:54:48.031Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:54:48.213Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:54:48.225Z][INFO] project:list-packages --> 200 (194 ms)
+[2026-10-08T19:54:48.645Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:54:48.647Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T19:54:50.752Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:54:51.301Z][INFO] packages:get-packageinfo --> 200 (550 ms)
+[2026-10-08T19:55:40.515Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:55:40.685Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:55:40.690Z][INFO] project:list-packages --> 200 (176 ms)
+[2026-10-08T19:55:41.527Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:55:41.729Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:55:41.735Z][INFO] project:list-packages --> 200 (208 ms)
+[2026-10-08T19:55:42.188Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:55:42.192Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T19:55:46.365Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:55:46.835Z][INFO] packages:get-packageinfo --> 200 (470 ms)
+[2026-10-08T19:56:33.749Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:56:33.928Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:56:33.930Z][INFO] project:list-packages --> 200 (181 ms)
+[2026-10-08T19:56:34.810Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T19:56:34.980Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T19:56:34.996Z][INFO] project:list-packages --> 200 (186 ms)
+[2026-10-08T19:56:35.490Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T19:56:35.494Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-08T19:56:39.591Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T19:56:40.032Z][INFO] packages:get-packageinfo --> 200 (441 ms)
+[2026-10-08T20:03:48.341Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:03:48.529Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:03:48.535Z][INFO] project:list-packages --> 200 (194 ms)
+[2026-10-08T20:03:49.418Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:03:49.601Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:03:49.605Z][INFO] project:list-packages --> 200 (187 ms)
+[2026-10-08T20:03:50.073Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:03:50.076Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T20:03:54.089Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:03:54.559Z][INFO] packages:get-packageinfo --> 200 (470 ms)
+[2026-10-08T20:04:06.236Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:04:06.399Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:04:06.401Z][INFO] project:list-packages --> 200 (165 ms)
+[2026-10-08T20:04:07.286Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:04:07.467Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:04:07.470Z][INFO] project:list-packages --> 200 (184 ms)
+[2026-10-08T20:04:07.958Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:04:07.961Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T20:04:11.838Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:04:11.864Z][INFO] packages:get-packageinfo --> 200 (26 ms)
+[2026-10-08T20:07:26.138Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:07:26.306Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:07:26.308Z][INFO] project:list-packages --> 200 (170 ms)
+[2026-10-08T20:07:27.052Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:07:27.234Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:07:27.242Z][INFO] project:list-packages --> 200 (190 ms)
+[2026-10-08T20:07:27.617Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:07:27.620Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T20:07:28.917Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:07:29.397Z][INFO] packages:get-packageinfo --> 200 (480 ms)
+[2026-10-08T20:07:33.824Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:07:33.969Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:07:33.974Z][INFO] project:list-packages --> 200 (150 ms)
+[2026-10-08T20:07:34.749Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:07:34.901Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:07:34.903Z][INFO] project:list-packages --> 200 (154 ms)
+[2026-10-08T20:07:35.284Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:07:35.286Z][INFO] config:project:get-registries --> 200 (2 ms)
+[2026-10-08T20:07:38.658Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:07:38.678Z][INFO] packages:get-packageinfo --> 200 (20 ms)
+[2026-10-08T20:08:31.889Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:08:32.038Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:08:32.052Z][INFO] project:list-packages --> 200 (163 ms)
+[2026-10-08T20:08:32.798Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:08:32.980Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:08:32.982Z][INFO] project:list-packages --> 200 (184 ms)
+[2026-10-08T20:08:33.385Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:08:33.390Z][INFO] config:project:get-registries --> 200 (5 ms)
+[2026-10-08T20:08:36.937Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:08:37.360Z][INFO] packages:get-packageinfo --> 200 (422 ms)
+[2026-10-08T20:08:49.917Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:08:50.089Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:08:50.093Z][INFO] project:list-packages --> 200 (176 ms)
+[2026-10-08T20:08:50.900Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:08:51.085Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:08:51.088Z][INFO] project:list-packages --> 200 (188 ms)
+[2026-10-08T20:08:51.507Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:08:51.510Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T20:08:55.073Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:08:55.093Z][INFO] packages:get-packageinfo --> 200 (20 ms)
+[2026-10-08T20:13:00.969Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:13:01.162Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:13:01.166Z][INFO] project:list-packages --> 200 (197 ms)
+[2026-10-08T20:13:02.037Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:13:02.230Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:13:02.232Z][INFO] project:list-packages --> 200 (195 ms)
+[2026-10-08T20:13:02.706Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:13:02.712Z][INFO] config:project:get-registries --> 200 (5 ms)
+[2026-10-08T20:13:04.295Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:13:04.862Z][INFO] packages:get-packageinfo --> 200 (567 ms)
+[2026-10-08T20:17:49.844Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:17:50.136Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:17:50.143Z][INFO] project:list-packages --> 200 (299 ms)
+[2026-10-08T20:17:51.683Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:17:52.006Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:17:52.014Z][INFO] project:list-packages --> 200 (330 ms)
+[2026-10-08T20:17:52.680Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:17:52.683Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T20:17:54.751Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:17:55.170Z][INFO] packages:get-packageinfo --> 200 (419 ms)
+[2026-10-08T20:17:59.531Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:17:59.704Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:17:59.706Z][INFO] project:list-packages --> 200 (175 ms)
+[2026-10-08T20:18:00.482Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:18:00.625Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:18:00.643Z][INFO] project:list-packages --> 200 (161 ms)
+[2026-10-08T20:18:01.029Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:18:01.032Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-08T20:18:04.161Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:18:04.181Z][INFO] packages:get-packageinfo --> 200 (20 ms)
+[2026-10-08T20:20:11.841Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:20:11.997Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:20:12.006Z][INFO] project:list-packages --> 200 (165 ms)
+[2026-10-08T20:20:12.883Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-08T20:20:13.059Z][WARN] Package [com.unity.progrids] has a non-valid signature — status: Unsigned, reason: .signature file could not be located in the package, errorCode: ERR_LEGACY_SIGNATURE_FILE_NOT_FOUND
+[2026-10-08T20:20:13.062Z][INFO] project:list-packages --> 200 (179 ms)
+[2026-10-08T20:20:13.527Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-08T20:20:13.533Z][INFO] config:project:get-registries --> 200 (6 ms)
+[2026-10-08T20:20:17.241Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ai.assistant"
+}
+[2026-10-08T20:20:17.815Z][INFO] packages:get-packageinfo --> 200 (574 ms)

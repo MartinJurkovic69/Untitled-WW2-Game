@@ -1,128 +1,239 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
-    //Shooting
+    // Shooting
     public bool isShooting, readyToShoot = true;
-    bool allowReset = true;
-    public float shootingDelay = 1f;
-    //Spread
+    public float shootingDelay = 0.1f;      // delay between shots (semi/auto) or between whole bursts
+
+    // Burst
+    public int bulletsPerBurst = 3;
+    public float burstBulletInterval = 0.08f; // delay between bullets INSIDE a burst
+    public bool burstRequiresNewClick = true; // false = holding the button keeps firing bursts
+    int burstBulletsLeft;
+    bool isBursting;
+
+    // Spread
     public float spreadIntensity;
-    //Bullet
+
+    // Bullet
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
     public float bulletSpeed = 20f;
     public float bulletLifetime = 3f;
 
+    // Loading
+    public float reloadTime;
+    public int magazineSize, bulletsLeft;
+    public bool isReloading;
+
     public GameObject muzzleEffect;
+    ParticleSystem muzzleParticles;
 
     public enum ShootingMode
     {
         SemiAutomatic,
-        Automatic
+        Automatic,
+        Burst
     }
+
     [Header("Audio Data")]
     public WeaponAudioData weaponAudio;
     public ShootingMode currentShootingMode;
 
     private Animator animator;
+    private Camera cam;
 
     private void Awake()
     {
         readyToShoot = true;
         animator = GetComponent<Animator>();
+        cam = Camera.main;
+        if (muzzleEffect != null) muzzleParticles = muzzleEffect.GetComponent<ParticleSystem>();
+
+        bulletsLeft = magazineSize;
     }
+
+    private void OnDisable()
+    {
+        // Pending Invokes would otherwise survive weapon switching and fire/reload on a hidden gun
+        CancelInvoke();
+        isReloading = false;
+        isBursting = false;
+        readyToShoot = true;
+        if (AmmoManager.Instance != null && AmmoManager.Instance.reloadPrompt != null)
+        {
+            AmmoManager.Instance.reloadPrompt.gameObject.SetActive(false);
+        }
+    }
+
     void Update()
-{
-    // 1. Always track if the button is currently being held down (useful for animations/effects)
-    isShooting = Mouse.current.leftButton.isPressed;
-
-    // 2. Handle firing logic based on the shooting mode
-    if (currentShootingMode == ShootingMode.SemiAutomatic)
     {
-        // Semi-Auto: Only fires ONCE per click
-        if (Mouse.current.leftButton.wasPressedThisFrame && readyToShoot)
+        if (Mouse.current == null) return;
+
+        isShooting = Mouse.current.leftButton.isPressed;
+
+        bool wantsToShoot = false;
+        switch (currentShootingMode)
         {
+            case ShootingMode.SemiAutomatic:
+                wantsToShoot = Mouse.current.leftButton.wasPressedThisFrame;
+                break;
+            case ShootingMode.Automatic:
+                wantsToShoot = isShooting;
+                break;
+            case ShootingMode.Burst:
+                wantsToShoot = burstRequiresNewClick
+                    ? Mouse.current.leftButton.wasPressedThisFrame
+                    : isShooting;
+                break;
+        }
+
+        if (wantsToShoot && readyToShoot && !isReloading && bulletsLeft > 0)
+        {
+            if (currentShootingMode == ShootingMode.Burst)
+            {
+                isBursting = true;
+                burstBulletsLeft = bulletsPerBurst;
+            }
             FireWeapon();
-            readyToShoot = false; 
+        }
+        else if (wantsToShoot && readyToShoot && !isReloading && bulletsLeft <= 0)
+        {
+            SoundManager.Instance.PlayClip(weaponAudio.emptyClickClip, bulletSpawnPoint.position);
+            readyToShoot = false;
+            Invoke(nameof(ResetShot), shootingDelay);
+        }
+        // Reload
+        if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame
+            && bulletsLeft < magazineSize && !isReloading && !isBursting)
+        {
+            Reload();
+        }
+        UpdateAmmoDisplay();
+        UpdateReloadPrompt();
+    }
+
+    private void UpdateAmmoDisplay()
+    {
+        if (AmmoManager.Instance == null || AmmoManager.Instance.ammoDisplay == null) return;
+
+        if (currentShootingMode == ShootingMode.Burst)
+        {
+            // Show remaining / max bursts (rounded up so a partial burst still counts)
+            int bursts = Mathf.CeilToInt((float)bulletsLeft / bulletsPerBurst);
+            int maxBursts = Mathf.CeilToInt((float)magazineSize / bulletsPerBurst);
+            AmmoManager.Instance.ammoDisplay.text = $"{bursts}/{maxBursts}";
+        }
+        else
+        {
+            AmmoManager.Instance.ammoDisplay.text = $"{bulletsLeft}/{magazineSize}";
         }
     }
-    else if (currentShootingMode == ShootingMode.Automatic)
-    {
-        // Full-Auto: Fires continuously as long as it's held down
-        if (isShooting && readyToShoot)
-        {
-            FireWeapon();
-        }
-    }
-}
 
-        private void FireWeapon()
+    // Fires exactly one bullet, then schedules whatever comes next
+    private void FireWeapon()
     {
+        // Safety net: burst continuation or reload could have changed things since it was scheduled
+        if (bulletsLeft <= 0 || isReloading)
+        {
+            EndShotCycle();
+            return;
+        }
+
         readyToShoot = false;
+        bulletsLeft--;
 
-        muzzleEffect.GetComponent<ParticleSystem>().Play();
+        if (muzzleParticles != null) muzzleParticles.Play();
         SoundManager.Instance.PlayWeaponShot(weaponAudio, bulletSpawnPoint.position);
-        animator.SetTrigger("RECOIL"); 
+        bool isFirstShotOfBurst = currentShootingMode != ShootingMode.Burst || burstBulletsLeft == bulletsPerBurst;
+        if (isFirstShotOfBurst)
+        {
+            animator.SetTrigger("RECOIL");
+        }
 
-        // 1. Get the direction aiming at the crosshair (with spread included)
         Vector3 shootingDirection = CalculateShootingDirectionAndSpread().normalized;
 
-        // Instantiate the bullet
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-
-        // 2. Make the visual bullet model face the target point
-        bullet.transform.forward = shootingDirection; 
+        bullet.transform.forward = shootingDirection;
 
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-        
-        // FIX: Change bulletSpawnPoint.forward to shootingDirection so physics matches your math!
         bulletRb.AddForce(shootingDirection * bulletSpeed, ForceMode.Impulse);
 
         Destroy(bullet, bulletLifetime);
 
-        // Check if we are done shooting
-        if (allowReset)
+        if (currentShootingMode == ShootingMode.Burst && isBursting)
         {
-            Invoke("ResetShot", shootingDelay);
-            allowReset = false;
+            burstBulletsLeft--;
+
+            if (burstBulletsLeft > 0 && bulletsLeft > 0)
+            {
+                // More bullets in this burst
+                Invoke(nameof(FireWeapon), burstBulletInterval);
+                return;
+            }
+
+            isBursting = false;
         }
+
+        Invoke(nameof(ResetShot), shootingDelay);
+    }
+
+    private void EndShotCycle()
+    {
+        isBursting = false;
+        burstBulletsLeft = 0;
+        readyToShoot = true;
+    }
+
+    private void Reload()
+    {
+        isReloading = true;
+        SoundManager.Instance.PlayClip(weaponAudio.reloadClip, bulletSpawnPoint.position);
+        Invoke(nameof(ReloadComplete), reloadTime);
+    }
+    private void UpdateReloadPrompt()
+    {
+        if (AmmoManager.Instance == null ||AmmoManager.Instance.reloadPrompt == null) return;
+
+        bool show = bulletsLeft <= 0 && !isReloading;
+        AmmoManager.Instance.reloadPrompt.gameObject.SetActive(show);
+    }
+    private void ReloadComplete()
+    {
+        bulletsLeft = magazineSize;
+        isReloading = false;
     }
 
     private void ResetShot()
     {
         readyToShoot = true;
-        allowReset = true;
     }
 
-        public Vector3 CalculateShootingDirectionAndSpread()
+    public Vector3 CalculateShootingDirectionAndSpread()
     {
         // Shooting from middle of screen (crosshair)
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-        RaycastHit hit;
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
         Vector3 targetPoint;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out RaycastHit hit))
         {
             targetPoint = hit.point;
         }
         else
         {
-            targetPoint = ray.GetPoint(1000); // Arbitrary far point if nothing is hit
+            targetPoint = ray.GetPoint(1000); // arbitrary far point if nothing is hit
         }
 
-        // Get the base direction from the gun barrel to the crosshair target point
         Vector3 direction = (targetPoint - bulletSpawnPoint.position).normalized;
 
-        // Calculate random spread offsets
         float spreadX = Random.Range(-spreadIntensity, spreadIntensity);
         float spreadY = Random.Range(-spreadIntensity, spreadIntensity);
 
-        // FIX: Instead of adding to global X/Y, project the spread relative to the camera's view
-        Vector3 spreadVector = Camera.main.transform.right * spreadX + Camera.main.transform.up * spreadY;
+        Vector3 spreadVector = cam.transform.right * spreadX + cam.transform.up * spreadY;
 
-        // Return the final direction combined with the relative spread
-        return direction + spreadVector;    
-    }   
+        return direction + spreadVector;
+    }
 }

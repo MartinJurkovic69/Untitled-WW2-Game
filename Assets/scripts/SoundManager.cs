@@ -14,17 +14,15 @@ public class SoundManager : MonoBehaviour
 
     public void PlayWeaponShot(WeaponAudioData data, Vector3 position)
 {
-    // FIX: If no audio data was passed, exit early instead of crashing!
     if (data == null)
     {
         Debug.LogWarning("SoundManager: Received null WeaponAudioData! Make sure it is assigned on the Weapon component.");
         return;
     }
-
+    
     AudioClip clipToPlay = data.GetRandomFireClip();
     if (clipToPlay == null) return;
 
-    // ... rest of your audio instantiation code ...
     GameObject temporaryAudioObj = Instantiate(oneShotAudioSourcePrefab, position, Quaternion.identity);
     AudioSource audioSource = temporaryAudioObj.GetComponent<AudioSource>();
 
@@ -34,4 +32,20 @@ public class SoundManager : MonoBehaviour
     audioSource.Play();
     Destroy(temporaryAudioObj, clipToPlay.length);
 }
+public void PlayClip(AudioClip clip, Vector3 position)
+    {
+        if (clip == null)
+        {
+            Debug.LogWarning("SoundManager: Received null AudioClip! Make sure it is assigned.");
+            return;
+        }
+        GameObject obj = Instantiate(oneShotAudioSourcePrefab, position, Quaternion.identity);
+        AudioSource audioSource = obj.GetComponent<AudioSource>();
+
+        audioSource.clip = clip;
+        audioSource.pitch = 1f; 
+        audioSource.Play();
+
+        Destroy(obj, clip.length);
+    }
 }
