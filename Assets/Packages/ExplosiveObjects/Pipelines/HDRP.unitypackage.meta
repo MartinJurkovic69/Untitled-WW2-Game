@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bb722ce59e844f3439d438224a386637
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 255996
+  packageName: Exploding Objects
+  packageVersion: 1.1
+  assetPath: Assets/ExplosiveObjects/Pipelines/HDRP.unitypackage
+  uploadId: 850400

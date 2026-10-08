@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 72247e4884dafee42b3736e6036d1522
+timeCreated: 1473846625
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 73777
+  packageName: Legacy Particle Pack
+  packageVersion: 6.0
+  assetPath: Assets/UnityTechnologies/ParticlePack/EffectExamples/Goop Effects/Materials/BloodStreamParticle.mat
+  uploadId: 871050

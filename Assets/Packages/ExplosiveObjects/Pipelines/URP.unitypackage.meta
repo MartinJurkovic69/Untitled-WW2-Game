@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bc0b225cc1ea75d4f8aebf598eb8e6f3
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 255996
+  packageName: Exploding Objects
+  packageVersion: 1.1
+  assetPath: Assets/ExplosiveObjects/Pipelines/URP.unitypackage
+  uploadId: 850400
