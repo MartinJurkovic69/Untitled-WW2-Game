@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
+    public bool isActiveWeapon = false; // Is this the currently equipped weapon?
     // Shooting
     public bool isShooting, readyToShoot = true;
     public float shootingDelay = 0.1f;      // delay between shots (semi/auto) or between whole bursts
@@ -29,6 +30,10 @@ public class Weapon : MonoBehaviour
     public int magazineSize, bulletsLeft;
     public bool isReloading;
 
+    public Vector3 spawnposition;
+    public Vector3 spawnrotation;
+
+
     public GameObject muzzleEffect;
     ParticleSystem muzzleParticles;
 
@@ -50,6 +55,7 @@ public class Weapon : MonoBehaviour
     {
         readyToShoot = true;
         animator = GetComponent<Animator>();
+        if (animator != null) animator.enabled = isActiveWeapon;
         cam = Camera.main;
         if (muzzleEffect != null) muzzleParticles = muzzleEffect.GetComponent<ParticleSystem>();
 
@@ -71,6 +77,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        if (!isActiveWeapon) return;
         if (Mouse.current == null) return;
 
         isShooting = Mouse.current.leftButton.isPressed;
@@ -131,7 +138,6 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    // Fires exactly one bullet, then schedules whatever comes next
     private void FireWeapon()
     {
         // Safety net: burst continuation or reload could have changed things since it was scheduled
@@ -235,4 +241,21 @@ public class Weapon : MonoBehaviour
 
         return direction + spreadVector;
     }
+    public void SetEquipped(bool equipped)
+{
+    isActiveWeapon = equipped;
+    if (animator != null) animator.enabled = equipped;
+
+    if (!equipped)
+    {
+        CancelInvoke();
+        isReloading = false;
+        isBursting = false;
+        readyToShoot = true;
+
+        if (AmmoManager.Instance != null && AmmoManager.Instance.reloadPrompt != null)
+            AmmoManager.Instance.reloadPrompt.gameObject.SetActive(false);
+    }
 }
+
+}   
