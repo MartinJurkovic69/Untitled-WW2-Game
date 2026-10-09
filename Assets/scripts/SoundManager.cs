@@ -27,12 +27,13 @@ public class SoundManager : MonoBehaviour
     AudioSource audioSource = temporaryAudioObj.GetComponent<AudioSource>();
 
     audioSource.clip = clipToPlay;
+    audioSource.volume = Mathf.Clamp01(data.fireVolume);
     audioSource.pitch = 1f + Random.Range(-data.pitchRandomness, data.pitchRandomness);
     
     audioSource.Play();
     Destroy(temporaryAudioObj, clipToPlay.length);
 }
-public void PlayClip(AudioClip clip, Vector3 position)
+public void PlayClip(AudioClip clip, Vector3 position, float volume = 1f, float pitchRandomness = 1f)
     {
         if (clip == null)
         {
@@ -43,6 +44,7 @@ public void PlayClip(AudioClip clip, Vector3 position)
         AudioSource audioSource = obj.GetComponent<AudioSource>();
 
         audioSource.clip = clip;
+        audioSource.volume = Mathf.Clamp01(volume);
         audioSource.pitch = 1f; 
         audioSource.Play();
 

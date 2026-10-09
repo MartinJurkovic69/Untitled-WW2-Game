@@ -100,11 +100,9 @@ public class Weapon : MonoBehaviour
             }
             FireWeapon();
         }
-        else if (wantsToShoot && readyToShoot && !isReloading && bulletsLeft <= 0)
+        else if (Mouse.current.leftButton.wasPressedThisFrame && !isReloading && !isBursting && bulletsLeft <= 0)
         {
-            SoundManager.Instance.PlayClip(weaponAudio.emptyClickClip, bulletSpawnPoint.position);
-            readyToShoot = false;
-            Invoke(nameof(ResetShot), shootingDelay);
+            SoundManager.Instance.PlayClip(weaponAudio.emptyClickClip, bulletSpawnPoint.position, weaponAudio.emptyClickVolume);
         }
         // Reload
         if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame
@@ -191,7 +189,8 @@ public class Weapon : MonoBehaviour
     private void Reload()
     {
         isReloading = true;
-        SoundManager.Instance.PlayClip(weaponAudio.reloadClip, bulletSpawnPoint.position);
+        SoundManager.Instance.PlayClip(weaponAudio.reloadClip, bulletSpawnPoint.position, weaponAudio.reloadVolume);
+        animator.SetTrigger("RELOAD");
         Invoke(nameof(ReloadComplete), reloadTime);
     }
     private void UpdateReloadPrompt()
