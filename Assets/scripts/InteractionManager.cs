@@ -48,8 +48,6 @@ public class InteractionManager : MonoBehaviour
             c.enabled = false;
         }
         weapon.transform.SetParent(weaponHolder);
-        weapon.transform.localPosition = Vector3.zero;
-        weapon.transform.localRotation = Quaternion.identity;
         weapon.SetEquipped(true);
     }
     private void Drop(Weapon weapon)

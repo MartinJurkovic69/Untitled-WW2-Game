@@ -30,9 +30,8 @@ public class Weapon : MonoBehaviour
     public int magazineSize, bulletsLeft;
     public bool isReloading;
 
-    public Vector3 spawnposition;
-    public Vector3 spawnrotation;
-
+    public Vector3 heldLocalPosition = Vector3.zero;
+    public Vector3 heldLocalEuler = Vector3.zero;
 
     public GameObject muzzleEffect;
     ParticleSystem muzzleParticles;
@@ -242,20 +241,33 @@ public class Weapon : MonoBehaviour
         return direction + spreadVector;
     }
     public void SetEquipped(bool equipped)
-{
-    isActiveWeapon = equipped;
-    if (animator != null) animator.enabled = equipped;
-
-    if (!equipped)
     {
-        CancelInvoke();
-        isReloading = false;
-        isBursting = false;
-        readyToShoot = true;
+        isActiveWeapon = equipped;
+        if (equipped)
+        {
+            transform.localPosition = heldLocalPosition;
+            transform.localRotation = Quaternion.Euler(heldLocalEuler);
+        }
+        if (animator != null)
+        {
+            animator.enabled = true;
+            animator.Rebind();
+            animator.Update(0f);
+        }
+        else
+        {
+            if  (animator != null) animator.enabled = false;
 
-        if (AmmoManager.Instance != null && AmmoManager.Instance.reloadPrompt != null)
-            AmmoManager.Instance.reloadPrompt.gameObject.SetActive(false);
+            CancelInvoke();
+            isReloading = false;
+            isBursting = false;
+            readyToShoot = true;
+            if (AmmoManager.Instance != null && AmmoManager.Instance.reloadPrompt != null)
+            {
+                AmmoManager.Instance.reloadPrompt.gameObject.SetActive(false);
+            }
+        }
     }
-}
+        
 
 }   
