@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
+using Unity.VisualScripting;
 
 public class InteractionManager : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class InteractionManager : MonoBehaviour
     public float interactionDistance = 5f;
     public Transform weaponHolder; 
     public float dropForce = 1f; 
+    public TextMeshProUGUI pickupPrompt;
     [Header("Weapon Slots")]
     public Weapon primaryWeapon;
     public Weapon secondaryWeapon;
@@ -40,6 +43,7 @@ public class InteractionManager : MonoBehaviour
     {
         HandleSwitchInput();
         HandlePickup();
+        UpdateWeaponUI();
     }
 
     private void HandleSwitchInput()
@@ -59,19 +63,34 @@ public class InteractionManager : MonoBehaviour
     }
     private void HandlePickup()
     {
+        Weapon target = null;
         Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance))
         {
             Weapon weapon = hit.collider.GetComponentInParent<Weapon>();
             if (weapon != null && weapon != primaryWeapon && weapon != secondaryWeapon)
             {
-                //TODO: Show pickup prompt
-                if (Keyboard.current.eKey.wasPressedThisFrame)
-                {
-                    Pickup(weapon);
-                }
+                target = weapon;
             }
         }
+        ShowPickupPrompt(target);
+        if (target != null && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            Pickup(target);
+        }
+    }
+    private void ShowPickupPrompt(Weapon weapon)
+    {
+        if (pickupPrompt == null) return;
+        if (weapon == null)
+        {
+            pickupPrompt.gameObject.SetActive(false);
+            return;
+        }
+        string weaponName = string.IsNullOrEmpty(weapon.displayName) ? weapon.name : weapon.displayName;
+        string slotName = weapon.weaponSlot == Weapon.WeaponSlot.Primary ? "Primary" : "Secondary";
+        pickupPrompt.text = $"Press 'E' to pick up {weaponName} ({slotName})";
+        pickupPrompt.gameObject.SetActive(true);
     }
     private void SwitchTo(Weapon target)
     {
@@ -115,8 +134,7 @@ public class InteractionManager : MonoBehaviour
         }
         weapon.transform.SetParent(weaponHolder);
         Draw(weapon);
-    }
-    
+    } 
     private void Drop(Weapon weapon)
     {
         if (weapon == primaryWeapon)
@@ -146,5 +164,23 @@ public class InteractionManager : MonoBehaviour
         rb.isKinematic = false;
         rb.useGravity = true;
         rb.AddForce(mainCamera.transform.forward * dropForce, ForceMode.Impulse);
+    }
+    private void UpdateWeaponUI()
+    {
+        if (AmmoManager.Instance == null) return;
+        bool hasWeapon = activeWeapon != null;
+        if (AmmoManager.Instance.ammoDisplay != null)
+        {
+            AmmoManager.Instance.ammoDisplay.enabled = hasWeapon;
+        }
+        if (!hasWeapon)
+    {
+            if (AmmoManager.Instance.reloadPrompt != null){
+                AmmoManager.Instance.reloadPrompt.gameObject.SetActive(false);
+            }
+            if (AmmoManager.Instance.ammoWarning != null){
+                AmmoManager.Instance.ammoWarning.gameObject.SetActive(false);
+            }
+        }
     }
 }

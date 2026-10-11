@@ -28,7 +28,9 @@ public class Weapon : MonoBehaviour
     // Loading
     public float reloadTime;
     public int magazineSize, bulletsLeft;
+    public int reserveAmmo;
     public bool isReloading;
+
 
     public Vector3 heldLocalPosition = Vector3.zero;
     public Vector3 heldLocalEuler = Vector3.zero;
@@ -41,6 +43,7 @@ public class Weapon : MonoBehaviour
         Primary,
         Secondary
     }
+    public string displayName;
 
     [Header("Inventory")]
     public WeaponSlot weaponSlot;
@@ -126,23 +129,7 @@ public class Weapon : MonoBehaviour
         }
         UpdateAmmoDisplay();
         UpdateReloadPrompt();
-    }
-
-    private void UpdateAmmoDisplay()
-    {
-        if (AmmoManager.Instance == null || AmmoManager.Instance.ammoDisplay == null) return;
-
-        if (currentShootingMode == ShootingMode.Burst)
-        {
-            // Show remaining / max bursts (rounded up so a partial burst still counts)
-            int bursts = Mathf.CeilToInt((float)bulletsLeft / bulletsPerBurst);
-            int maxBursts = Mathf.CeilToInt((float)magazineSize / bulletsPerBurst);
-            AmmoManager.Instance.ammoDisplay.text = $"{bursts}/{maxBursts}";
-        }
-        else
-        {
-            AmmoManager.Instance.ammoDisplay.text = $"{bulletsLeft}/{magazineSize}";
-        }
+        UpdateAmmoWarning();
     }
 
     private void FireWeapon()
@@ -201,24 +188,65 @@ public class Weapon : MonoBehaviour
 
     private void Reload()
     {
+        if (reserveAmmo <= 0 || bulletsLeft == magazineSize) return;
         isReloading = true;
         SoundManager.Instance.PlayClip(weaponAudio.reloadClip, bulletSpawnPoint.position, weaponAudio.reloadVolume);
-        animator.SetTrigger("RELOAD");
         Invoke(nameof(ReloadComplete), reloadTime);
     }
     private void UpdateReloadPrompt()
     {
         if (AmmoManager.Instance == null ||AmmoManager.Instance.reloadPrompt == null) return;
 
-        bool show = bulletsLeft <= 0 && !isReloading;
+        bool show = bulletsLeft <= 0 && reserveAmmo > 0 && !isReloading;
         AmmoManager.Instance.reloadPrompt.gameObject.SetActive(show);
     }
     private void ReloadComplete()
     {
-        bulletsLeft = magazineSize;
+        int needed = magazineSize - bulletsLeft;
+        int toReload = Mathf.Min(needed, reserveAmmo);
+        bulletsLeft += toReload;
+        reserveAmmo -= toReload;
         isReloading = false;
     }
+    private void UpdateAmmoDisplay()
+    {
+        if (AmmoManager.Instance == null || AmmoManager.Instance.ammoDisplay == null) return;
 
+        if (currentShootingMode == ShootingMode.Burst)
+        {
+            // Show remaining / max bursts (rounded up so a partial burst still counts)
+            int bursts = Mathf.CeilToInt((float)bulletsLeft / bulletsPerBurst);
+            int reserveBursts = Mathf.CeilToInt((float)reserveAmmo / bulletsPerBurst);
+            AmmoManager.Instance.ammoDisplay.text = $"{bursts}/{reserveBursts}";
+        }
+        else
+        {
+            AmmoManager.Instance.ammoDisplay.text = $"{bulletsLeft}/{reserveAmmo}";
+        }
+    }
+    private void UpdateAmmoWarning()
+    {
+        if (AmmoManager.Instance == null || AmmoManager.Instance.ammoWarning == null) return;
+
+        TextMeshProUGUI warning = AmmoManager.Instance.ammoWarning;
+
+        if (bulletsLeft <= 0 && reserveAmmo <= 0)
+        {
+            warning.text = "No ammo";
+            warning.color = Color.red;
+            warning.gameObject.SetActive(true);
+        }
+        else if (reserveAmmo <= magazineSize)
+        {
+            warning.text = "Low ammo";
+            warning.color = Color.yellow;
+            warning.gameObject.SetActive(true);
+        }
+        else
+        {
+            warning.gameObject.SetActive(false);
+        }
+    }
     private void ResetShot()
     {
         readyToShoot = true;
@@ -273,6 +301,10 @@ public class Weapon : MonoBehaviour
             if (AmmoManager.Instance != null && AmmoManager.Instance.reloadPrompt != null)
             {
                 AmmoManager.Instance.reloadPrompt.gameObject.SetActive(false);
+            }
+            if (AmmoManager.Instance.ammoWarning != null)
+            {
+                AmmoManager.Instance.ammoWarning.gameObject.SetActive(false);
             }
         }
     }

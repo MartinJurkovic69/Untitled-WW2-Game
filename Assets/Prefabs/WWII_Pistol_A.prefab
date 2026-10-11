@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 870412152941025741}
   - component: {fileID: 4960355545292979653}
   - component: {fileID: 8282261388492643003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4800,7 +4800,7 @@ GameObject:
   - component: {fileID: 3789463554673826119}
   - component: {fileID: 9165992870257128225}
   - component: {fileID: 4638062877155954128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_Pistol_A_Bolt_Part_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4888,7 +4888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3203430668049672266}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4922,7 +4922,7 @@ GameObject:
   - component: {fileID: 5553581361958842807}
   - component: {fileID: 2752961973783249869}
   - component: {fileID: 2856974783160601404}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_Pistol_A_Receiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5012,7 +5012,7 @@ GameObject:
   - component: {fileID: 7271174308107648464}
   - component: {fileID: 1697279172552740566}
   - component: {fileID: 5865488022222336097}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_Pistol_A_Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5102,7 +5102,7 @@ GameObject:
   - component: {fileID: 416424231576450629}
   - component: {fileID: 828695587941635785}
   - component: {fileID: 3393418956605412519}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_Pistol_A_Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5192,7 +5192,7 @@ GameObject:
   - component: {fileID: 5062253462565802551}
   - component: {fileID: 1314621416092460467}
   - component: {fileID: 1804738384101314556}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_Pistol_A_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5282,7 +5282,8 @@ GameObject:
   - component: {fileID: 7378526279750453896}
   - component: {fileID: -5166604482408627189}
   - component: {fileID: 5622583413201280096}
-  m_Layer: 0
+  - component: {fileID: 5822052233435000966}
+  m_Layer: 6
   m_Name: WWII_Pistol_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5321,6 +5322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c4d4988fac6db4e8d9bab1ae6392c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  isActiveWeapon: 0
   isShooting: 0
   readyToShoot: 1
   shootingDelay: 0.5
@@ -5336,9 +5338,11 @@ MonoBehaviour:
   magazineSize: 8
   bulletsLeft: 0
   isReloading: 0
-  spawnposition: {x: -0.86, y: 1.87, z: 4.54}
-  spawnrotation: {x: 0, y: 0, z: 90}
+  heldLocalPosition: {x: 0, y: 0, z: 0}
+  heldLocalEuler: {x: 0, y: 0, z: 0}
   muzzleEffect: {fileID: 2099023905771733448}
+  displayName: Luger
+  weaponSlot: 1
   weaponAudio: {fileID: 11400000, guid: 0740daf71e8faff428ff08ee4d689a71, type: 2}
   currentShootingMode: 0
 --- !u!95 &5622583413201280096
@@ -5363,6 +5367,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &5822052233435000966
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867254334354444338}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15, y: 0.3, z: 0.35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8493475529878958408
 GameObject:
   m_ObjectHideFlags: 0
@@ -5374,7 +5399,7 @@ GameObject:
   - component: {fileID: 8544249035641879394}
   - component: {fileID: 5637066428397875405}
   - component: {fileID: 2419445329345207605}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_Pistol_A_Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5464,7 +5489,7 @@ GameObject:
   - component: {fileID: 8218395103720556361}
   - component: {fileID: 4029054435778005123}
   - component: {fileID: 1876737993940610743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_Pistol_A_Bolt_Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5554,7 +5579,7 @@ GameObject:
   - component: {fileID: 6905049569813299757}
   - component: {fileID: 6872201431419763348}
   - component: {fileID: 4447091578473809503}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_Pistol_A_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

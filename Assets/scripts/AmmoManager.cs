@@ -8,6 +8,7 @@ public class AmmoManager : MonoBehaviour
         //UI
         public TextMeshProUGUI ammoDisplay;
         public TextMeshProUGUI reloadPrompt;
+        public TextMeshProUGUI ammoWarning;
 
         private void Awake()
         {

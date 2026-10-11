@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2378109413140301394}
   - component: {fileID: 6231077512306502330}
   - component: {fileID: 8988951453868178795}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_AR_A_Stock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 5462983873742799944}
   - component: {fileID: 4442169215778343978}
   - component: {fileID: 8280763947883554366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_AR_A_Ejection Port
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 2801163449188374255}
   - component: {fileID: 36501012243115499}
   - component: {fileID: 8642220866184048426}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_AR_A_Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,8 @@ GameObject:
   - component: {fileID: 5143862669207507600}
   - component: {fileID: 6606146551813992358}
   - component: {fileID: 4428392149067721230}
-  m_Layer: 0
+  - component: {fileID: 1632185330255886427}
+  m_Layer: 6
   m_Name: STG44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,6 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c4d4988fac6db4e8d9bab1ae6392c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  isActiveWeapon: 0
   isShooting: 0
   readyToShoot: 1
   shootingDelay: 0.12
@@ -337,9 +339,11 @@ MonoBehaviour:
   magazineSize: 30
   bulletsLeft: 0
   isReloading: 0
-  spawnposition: {x: 0.73, y: 1.86, z: 4.66}
-  spawnrotation: {x: 0, y: 0, z: 90}
+  heldLocalPosition: {x: 0, y: 0, z: 0}
+  heldLocalEuler: {x: 0, y: 0, z: 0}
   muzzleEffect: {fileID: 8738707352556568390}
+  displayName: STG44
+  weaponSlot: 0
   weaponAudio: {fileID: 11400000, guid: 3f9619bd45772da48b50a76905a6a957, type: 2}
   currentShootingMode: 1
 --- !u!95 &4428392149067721230
@@ -364,6 +368,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1632185330255886427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3367247576522728711}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2, y: 0.25, z: 1.2}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!1 &5925017228440240735
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +400,7 @@ GameObject:
   - component: {fileID: 8652159287173947920}
   - component: {fileID: 5306168927536344343}
   - component: {fileID: 5860129853914967061}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_AR_A_Receiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633829227143867429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +523,7 @@ GameObject:
   - component: {fileID: 7397558419879124089}
   - component: {fileID: 8398093854133919261}
   - component: {fileID: 3156475800109806736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_AR_A_Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +613,7 @@ GameObject:
   - component: {fileID: 8124086563000330817}
   - component: {fileID: 5834037006983247646}
   - component: {fileID: 7777466637661296941}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_AR_A_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +703,7 @@ GameObject:
   - component: {fileID: 192597105643305805}
   - component: {fileID: 6497875643955905332}
   - component: {fileID: 8329569632833414943}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5467,7 +5492,7 @@ GameObject:
   - component: {fileID: 5379546458701870716}
   - component: {fileID: 4409410865134958367}
   - component: {fileID: 2929413718949764223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WWII_AR_A_Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
