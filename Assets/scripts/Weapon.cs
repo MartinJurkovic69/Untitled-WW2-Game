@@ -29,8 +29,9 @@ public class Weapon : MonoBehaviour
     public float reloadTime;
     public int magazineSize, bulletsLeft;
     public int reserveAmmo;
+    public int maxReserveAmmo;
     public bool isReloading;
-
+    public bool IsReserveFull => reserveAmmo >= maxReserveAmmo;
 
     public Vector3 heldLocalPosition = Vector3.zero;
     public Vector3 heldLocalEuler = Vector3.zero;
@@ -134,7 +135,7 @@ public class Weapon : MonoBehaviour
 
     private void FireWeapon()
     {
-        // Safety net: burst continuation or reload could have changed things since it was scheduled
+
         if (bulletsLeft <= 0 || isReloading)
         {
             EndShotCycle();
@@ -168,7 +169,6 @@ public class Weapon : MonoBehaviour
 
             if (burstBulletsLeft > 0 && bulletsLeft > 0)
             {
-                // More bullets in this burst
                 Invoke(nameof(FireWeapon), burstBulletInterval);
                 return;
             }
@@ -308,5 +308,8 @@ public class Weapon : MonoBehaviour
             }
         }
     }
-        
+    public void RestockReserve()
+    {
+        reserveAmmo = maxReserveAmmo;
+    }   
 }   
