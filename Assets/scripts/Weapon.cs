@@ -36,6 +36,15 @@ public class Weapon : MonoBehaviour
     public GameObject muzzleEffect;
     ParticleSystem muzzleParticles;
 
+    public enum WeaponSlot
+    {
+        Primary,
+        Secondary
+    }
+
+    [Header("Inventory")]
+    public WeaponSlot weaponSlot;
+
     public enum ShootingMode
     {
         SemiAutomatic,
@@ -63,7 +72,6 @@ public class Weapon : MonoBehaviour
 
     private void OnDisable()
     {
-        // Pending Invokes would otherwise survive weapon switching and fire/reload on a hidden gun
         CancelInvoke();
         isReloading = false;
         isBursting = false;
@@ -269,5 +277,4 @@ public class Weapon : MonoBehaviour
         }
     }
         
-
 }   
