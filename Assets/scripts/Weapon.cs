@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Scripting.LifecycleManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -100,6 +101,7 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         if (!isActiveWeapon) return;
+        if (ThrowablesManager.Instance != null && ThrowablesManager.Instance.isWheelOpen) return;
         if (Mouse.current == null) return;
 
         isShooting = Mouse.current.leftButton.isPressed;
@@ -223,17 +225,17 @@ public class Weapon : MonoBehaviour
     {
         if (AmmoManager.Instance == null || AmmoManager.Instance.ammoDisplay == null) return;
 
+        int loaded = bulletsLeft;
+        int reserve = reserveAmmo;
+
         if (currentShootingMode == ShootingMode.Burst)
         {
-            // Show remaining / max bursts (rounded up so a partial burst still counts)
-            int bursts = Mathf.CeilToInt((float)bulletsLeft / bulletsPerBurst);
-            int reserveBursts = Mathf.CeilToInt((float)reserveAmmo / bulletsPerBurst);
-            AmmoManager.Instance.ammoDisplay.text = $"{bursts}/{reserveBursts}";
+            loaded = Mathf.CeilToInt((float)bulletsLeft / bulletsPerBurst);
+            reserve = Mathf.CeilToInt((float)reserveAmmo / bulletsPerBurst);
         }
-        else
-        {
-            AmmoManager.Instance.ammoDisplay.text = $"{bulletsLeft}/{reserveAmmo}";
-        }
+        AmmoManager.Instance.ammoDisplay.text = loaded.ToString();
+        if (AmmoManager.Instance.reserveDisplay != null)
+            AmmoManager.Instance.reserveDisplay.text = reserve.ToString();
     }
     private void UpdateAmmoWarning()
     {

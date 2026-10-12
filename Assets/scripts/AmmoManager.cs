@@ -10,6 +10,7 @@ public class AmmoManager : MonoBehaviour
 
         //UI
         public TextMeshProUGUI ammoDisplay;
+        public TextMeshProUGUI reserveDisplay;
         public TextMeshProUGUI reloadPrompt;
         public TextMeshProUGUI ammoWarning;
 
@@ -17,7 +18,6 @@ public class AmmoManager : MonoBehaviour
         public GameObject weaponPanel;
         public Image weaponIcon;
         public TextMeshProUGUI weaponNameText;
-        public Image ammoTypeIcon;
 
         private void Awake()
         {

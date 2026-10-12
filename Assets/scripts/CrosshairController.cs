@@ -14,8 +14,12 @@ public class CrosshairController : MonoBehaviour
     {
         if (crosshair == null) return;
         float aim = AimController.Instance != null ? AimController.Instance.AimAmount : 0f;
+        float alpha = baseAlpha * (1f - Mathf.SmoothStep(0f, 1f, aim));
+
+        if (ThrowablesManager.Instance != null && ThrowablesManager.Instance.isWheelOpen)
+            alpha = 0f;
         Color c = crosshair.color;
-        c.a = baseAlpha * (1f - Mathf.SmoothStep(0f, 1f, aim));
+        c.a = alpha;
         crosshair.color = c;
     }
 }

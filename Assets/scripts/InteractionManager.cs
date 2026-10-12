@@ -226,12 +226,6 @@ public class InteractionManager : MonoBehaviour
                     ? activeWeapon.name : activeWeapon.displayName;
             }
         }
-        if (ui.ammoTypeIcon != null)
-        {
-            bool show = hasWeapon && activeWeapon.ammoTypeIcon != null;
-            ui.ammoTypeIcon.gameObject.SetActive(show);
-            if (show) ui.ammoTypeIcon.sprite = activeWeapon.ammoTypeIcon;
-        }
         if (!hasWeapon)
         {
             if (ui.reloadPrompt != null) ui.reloadPrompt.gameObject.SetActive(false);

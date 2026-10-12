@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4dfa788db5ed60045b37b3941a2541a0
+timeCreated: 1466724748
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 65024
+  packageName: PBR Weapons - World War II German Grenade
+  packageVersion: 1.0
+  assetPath: Assets/World War II - German Grenade/Materials/mat_GermanGrenade.mat
+  uploadId: 123999
