@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -202,18 +203,39 @@ public class InteractionManager : MonoBehaviour
     {
         if (AmmoManager.Instance == null) return;
 
+        AmmoManager ui = AmmoManager.Instance;
         bool hasWeapon = activeWeapon != null;
+        
+        if (ui.weaponPanel != null)
+            ui.weaponPanel.SetActive(hasWeapon);
 
-        if (AmmoManager.Instance.ammoDisplay != null)
-            AmmoManager.Instance.ammoDisplay.enabled = hasWeapon;
-
+        if (ui.ammoDisplay != null)
+            ui.ammoDisplay.enabled = hasWeapon;
+        if (ui.weaponIcon != null)
+        {
+            bool show = hasWeapon && activeWeapon.weaponIcon != null;
+            ui.weaponIcon.gameObject.SetActive(show);
+            if (show) ui.weaponIcon.sprite = activeWeapon.weaponIcon;
+        }
+        if (ui.weaponNameText != null)
+        {
+            ui.weaponNameText.gameObject.SetActive(hasWeapon);
+            if (hasWeapon)
+            {
+                ui.weaponNameText.text = string.IsNullOrEmpty(activeWeapon.displayName)
+                    ? activeWeapon.name : activeWeapon.displayName;
+            }
+        }
+        if (ui.ammoTypeIcon != null)
+        {
+            bool show = hasWeapon && activeWeapon.ammoTypeIcon != null;
+            ui.ammoTypeIcon.gameObject.SetActive(show);
+            if (show) ui.ammoTypeIcon.sprite = activeWeapon.ammoTypeIcon;
+        }
         if (!hasWeapon)
         {
-            if (AmmoManager.Instance.reloadPrompt != null)
-                AmmoManager.Instance.reloadPrompt.gameObject.SetActive(false);
-
-            if (AmmoManager.Instance.ammoWarning != null)
-                AmmoManager.Instance.ammoWarning.gameObject.SetActive(false);
+            if (ui.reloadPrompt != null) ui.reloadPrompt.gameObject.SetActive(false);
+            if (ui.ammoWarning != null) ui.ammoWarning.gameObject.SetActive(false);
         }
     }
 

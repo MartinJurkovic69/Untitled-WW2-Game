@@ -45,6 +45,9 @@ public class Weapon : MonoBehaviour
         Secondary
     }
     public string displayName;
+    [Header("UI")]
+    public Sprite weaponIcon;
+    public Sprite ammoTypeIcon;
 
     [Header("Inventory")]
     public WeaponSlot weaponSlot;
@@ -55,6 +58,7 @@ public class Weapon : MonoBehaviour
     public float adsSpeed = 5f;
     [Range(0f, 1f)] public float adsSpreadMultiplier = 0.5f;
     [Range(0f, 1f)] public float adsSensitivityMultiplier = 0.5f;
+    public bool adsUsesAnimation;
 
     public enum ShootingMode
     {
@@ -299,6 +303,7 @@ public class Weapon : MonoBehaviour
             animator.enabled = true;
             animator.Rebind();
             animator.Update(0f);
+            if (adsUsesAnimation) animator.SetBool("ADS" , false);
         }
         else
         {
@@ -322,4 +327,11 @@ public class Weapon : MonoBehaviour
     {
         reserveAmmo = maxReserveAmmo;
     }   
+    public void SetAiming(bool aiming)
+    {
+        if (animator != null && animator.isActiveAndEnabled && adsUsesAnimation)
+        {
+            animator.SetBool("ADS", aiming);
+        }
+    }
 }   

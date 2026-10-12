@@ -1,5 +1,8 @@
 using TMPro;
+using Unity.Hierarchy.Editor;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AmmoManager : MonoBehaviour
 {
@@ -9,6 +12,12 @@ public class AmmoManager : MonoBehaviour
         public TextMeshProUGUI ammoDisplay;
         public TextMeshProUGUI reloadPrompt;
         public TextMeshProUGUI ammoWarning;
+
+        [Header("Weapon Info")]
+        public GameObject weaponPanel;
+        public Image weaponIcon;
+        public TextMeshProUGUI weaponNameText;
+        public Image ammoTypeIcon;
 
         private void Awake()
         {
