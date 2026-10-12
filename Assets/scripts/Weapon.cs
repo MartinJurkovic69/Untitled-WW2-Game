@@ -49,6 +49,13 @@ public class Weapon : MonoBehaviour
     [Header("Inventory")]
     public WeaponSlot weaponSlot;
 
+    [Header("AimingDownSights")]
+    public Vector3 adsHolderOffset;
+    public float adsFOV = 40f;
+    public float adsSpeed = 5f;
+    [Range(0f, 1f)] public float adsSpreadMultiplier = 0.5f;
+    [Range(0f, 1f)] public float adsSensitivityMultiplier = 0.5f;
+
     public enum ShootingMode
     {
         SemiAutomatic,
@@ -254,7 +261,7 @@ public class Weapon : MonoBehaviour
 
     public Vector3 CalculateShootingDirectionAndSpread()
     {
-        // Shooting from middle of screen (crosshair)
+        
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
         Vector3 targetPoint;
@@ -264,13 +271,16 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            targetPoint = ray.GetPoint(1000); // arbitrary far point if nothing is hit
+            targetPoint = ray.GetPoint(1000); 
         }
 
         Vector3 direction = (targetPoint - bulletSpawnPoint.position).normalized;
 
-        float spreadX = Random.Range(-spreadIntensity, spreadIntensity);
-        float spreadY = Random.Range(-spreadIntensity, spreadIntensity);
+        float aim = AimController.Instance != null ? AimController.Instance.AimAmount : 0f;
+        float spread = spreadIntensity * Mathf.Lerp(1f, adsSpreadMultiplier, aim);
+
+        float spreadX = Random.Range(-spread, spread);
+        float spreadY = Random.Range(-spread, spread);
 
         Vector3 spreadVector = cam.transform.right * spreadX + cam.transform.up * spreadY;
 

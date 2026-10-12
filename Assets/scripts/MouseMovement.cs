@@ -21,8 +21,10 @@ public class MouseMovement : MonoBehaviour
     
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
 
-        float mouseX = mouseDelta.x * sensitivity * Time.deltaTime;
-        float mouseY = mouseDelta.y * sensitivity * Time.deltaTime;
+        float aimMultiplier = AimController.Instance != null ? AimController.Instance.SensitivityMultiplier : 1f;
+
+        float mouseX = mouseDelta.x * sensitivity * aimMultiplier * Time.deltaTime;
+        float mouseY = mouseDelta.y * sensitivity * aimMultiplier * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, bottomClamp, topClamp);
