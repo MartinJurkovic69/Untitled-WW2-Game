@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using Unity.AI.Assistant;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class ThrowablesManager : MonoBehaviour
         public string displayName;
         public Sprite icon;
         public int count;
+        public GameObject prefab;
     }
     public List<Throwable> throwables = new List<Throwable>
     {
@@ -25,12 +27,22 @@ public class ThrowablesManager : MonoBehaviour
         new Throwable {displayName = "Lure", count = 10},
     };
     public int equippedIndex = 0;
+    [Header("Throwing")]
+    public GameObject defaultThrowablePrefab;
+    public float throwForce = 12f;
+    public float throwUpwardForce = 2f;
+    public float throwCooldown = 2f;
+    public float throwableLifetime = 3f;
 
-    [Header("Indicator(always visible)")]
+    private float nextThrowTime;
+    private Camera cam;
+
+    [Header("Indicator")]
     public Image indicatorIcon;
     public TextMeshProUGUI indicatorCount;
     public Image panelBackground;
     public float panelFadeSpeed = 6f;
+    public CanvasGroup keyHint;
     [Header("DeadZone")]
     public RectTransform deadZoneVisual;
     private Canvas canvas;
@@ -56,6 +68,7 @@ public class ThrowablesManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        cam = Camera.main;
     }
     private void Start()
     {
@@ -78,6 +91,7 @@ public class ThrowablesManager : MonoBehaviour
                 if (Keyboard.current.gKey.wasReleasedThisFrame) CloseWheel(true);
             }
         }
+        HandleThrow();
         UpdatePanelBackground();
         RefreshIndicator();
     }
@@ -161,6 +175,7 @@ public class ThrowablesManager : MonoBehaviour
         shownCount = t.count;
 
         Color c = new Color(1f, 1f, 1f, t.count > 0 ? 1f: 0.3f);
+        if (keyHint != null) keyHint.alpha = t.count > 0 ? 1f : 0.3f;
 
         if (indicatorIcon != null)
         {
@@ -173,5 +188,47 @@ public class ThrowablesManager : MonoBehaviour
             indicatorCount.text = t.count.ToString();
             indicatorCount.color = c;
         }
+    }
+    private void HandleThrow()
+    {
+        if (isWheelOpen || Time.time < nextThrowTime) return;
+        if (Keyboard.current == null || !Keyboard.current.qKey.wasPressedThisFrame) return;
+
+        Throwable t = Equipped;
+        if (t == null || t.count <=0)return;
+
+        GameObject prefab = t.prefab != null ? t.prefab : defaultThrowablePrefab;
+        if (prefab == null)return;
+        t.count--;
+        nextThrowTime = Time.time + throwCooldown;
+
+        Vector3 origin = cam.transform.position + cam.transform.forward * 0.6f;
+        GameObject thrown = Instantiate(prefab, origin, cam.transform.rotation);
+
+        Collider[] cols = thrown.GetComponentsInChildren<Collider>();
+        if (cols.Length == 0)
+        {
+            thrown.AddComponent<SphereCollider>();
+        }
+        else
+        {
+            foreach (Collider c in cols) c.isTrigger = false;
+        }
+
+        Rigidbody rb = thrown.GetComponent<Rigidbody>();
+        if (rb == null) rb = thrown.AddComponent<Rigidbody>();
+
+        rb.isKinematic = false;
+        rb.useGravity = true;
+        rb.mass = 0.5f;
+        rb.linearDamping = 0f;
+        rb.angularDamping = 0.3f;
+        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+
+        rb.AddForce(cam.transform.forward * throwForce + cam.transform.up * throwUpwardForce, ForceMode.VelocityChange);
+        rb.AddTorque(Random.insideUnitSphere * 8f, ForceMode.VelocityChange);
+
+        Destroy (thrown , throwableLifetime);
     }
 }
