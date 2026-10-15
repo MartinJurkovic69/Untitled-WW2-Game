@@ -25,6 +25,7 @@ public class Weapon : MonoBehaviour
     public Transform bulletSpawnPoint;
     public float bulletSpeed = 20f;
     public float bulletLifetime = 3f;
+    public float bulletDamage = 25f;
 
     // Loading
     public float reloadTime;
@@ -169,6 +170,9 @@ public class Weapon : MonoBehaviour
         Vector3 shootingDirection = CalculateShootingDirectionAndSpread().normalized;
 
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        BulletDamage dmg = bullet.GetComponent<BulletDamage>();
+        if (dmg == null) dmg = bullet.AddComponent<BulletDamage>();
+        dmg.damage = bulletDamage;
         bullet.transform.forward = shootingDirection;
 
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
