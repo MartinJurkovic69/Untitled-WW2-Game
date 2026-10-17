@@ -109,6 +109,11 @@ public class ThrowablesManager : MonoBehaviour
     }
     private void Update()
     {
+        if (PauseMenu.IsPaused)
+        {
+            if (isWheelOpen) CloseWheel(false);
+            return;
+        }
         if (Keyboard.current != null)
         {
             if (Keyboard.current.gKey.wasPressedThisFrame) OpenWheel();

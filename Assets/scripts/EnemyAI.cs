@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Combatant))]
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour , IShovable
 {
     public enum AIState {Hold,Patrol,MoveTo,Investigate,Combat,Assault}
     public enum IdleBehaviour {HoldPosition,Patrol}
@@ -21,6 +21,9 @@ public class EnemyAI : MonoBehaviour
     public float walkSpeed = 2f;
     public float runSpeed = 4.5f;
     public float turnSpeed = 240f;
+    private Vector3 shoveVelocity;
+    private float shoveTimeLeft;
+    private float stunTimeLeft;
 
     [Header("Perception")]
     public float viewDistance = 45f;
@@ -86,6 +89,7 @@ public class EnemyAI : MonoBehaviour
         holdRotation = transform.rotation;
 
         combatant.Died += OnDied;
+        combatant.Damaged += OnDamaged;
     }
 
     private void Start()
@@ -106,11 +110,25 @@ public class EnemyAI : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if (combatant != null ) combatant.Died -= OnDied;
+        if (combatant != null)
+        {
+            combatant.Died -= OnDied;
+            combatant.Damaged -= OnDamaged;
+        }
     }
     private void Update()
     {
         if (combatant.isDead) return;
+        if (shoveTimeLeft > 0f)
+        {
+            agent.Move(shoveVelocity * Time.deltaTime);
+            shoveTimeLeft -= Time.deltaTime;
+        }
+        if (stunTimeLeft > 0f)
+        {
+            stunTimeLeft -= Time.deltaTime;
+            return;
+        }
 
         facingHandled = false;
 
@@ -471,7 +489,20 @@ public class EnemyAI : MonoBehaviour
     [ContextMenu("Order: Patrol Route")]
     private void TestOrderPatrol() { OrderPatrol(patrolPoints); }
 
+    public void Shove (Vector3 direction , float distance)
+    {
+        if (combatant.isDead || !agent.enabled) return;
 
+        direction.y = 0f;
+        if (direction.sqrMagnitude < 0.001f) return;
+
+        const float duration = 0.25f;
+        shoveVelocity = direction.normalized * (distance / duration);
+        shoveTimeLeft = duration;
+        stunTimeLeft = 0.5f;
+        Stop();
+
+    }
     private void MoveTo(Vector3 destination, float speed)
     {
         agent.isStopped = false;
@@ -514,6 +545,18 @@ public class EnemyAI : MonoBehaviour
         StartCoroutine(DeathRoutine());
         enabled = false; // Stops the AI
     }
+    private void OnDamaged(Combatant c)
+    {
+        if (combatant.isDead || state == AIState.Combat || assaulting) return;
+
+        Combatant attacker = FindNearestHostile();
+        if (attacker == null) return;
+
+        if (state == AIState.Investigate && (attacker.transform.position - investigatePoint).sqrMagnitude < 4f) return;
+
+        BeginInvestigate(attacker.transform.position);
+    }
+
     private IEnumerator DeathRoutine()
     {
         Quaternion startRot = transform.rotation;

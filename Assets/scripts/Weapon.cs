@@ -101,7 +101,9 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.IsPaused) return;
         if (!isActiveWeapon) return;
+        if (MeleeAttack.Instance != null && MeleeAttack.Instance.IsBusy) return;
         if (ThrowablesManager.Instance != null && ThrowablesManager.Instance.isWheelOpen) return;
         if (Mouse.current == null) return;
 
@@ -340,4 +342,17 @@ public class Weapon : MonoBehaviour
             animator.SetBool("ADS", aiming);
         }
     }
+    public void PlayMeleeAnimation()
+{
+    if (animator == null || !animator.isActiveAndEnabled) return;
+
+    foreach (AnimatorControllerParameter p in animator.parameters)
+    {
+        if (p.name == "MELEE")
+        {
+            animator.SetTrigger("MELEE");
+            return;
+        }
+    }
+}
 }   

@@ -40,6 +40,7 @@ public class InteractionManager : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenu.IsPaused) return;
         HandleSwitchInput();
         HandleInteraction();
         UpdateWeaponUI();

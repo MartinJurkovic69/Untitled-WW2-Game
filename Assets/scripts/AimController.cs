@@ -30,6 +30,7 @@ public class AimController : MonoBehaviour
     }
     private void Update()
     {
+        if (PauseMenu.IsPaused) return;
         Weapon weapon = InteractionManager.Instance != null ? InteractionManager.Instance.activeWeapon : null;
         if (weapon != lastWeapon)
         {
@@ -38,7 +39,7 @@ public class AimController : MonoBehaviour
             lastWantsAim = false;
             lastWeapon = weapon;
         }
-        bool wantsAim = weapon != null && !weapon.isReloading && (forceAim || (Mouse.current.rightButton.isPressed));
+        bool wantsAim = weapon != null && !weapon.isReloading && (forceAim || (Mouse.current.rightButton.isPressed)) && !(MeleeAttack.Instance != null && MeleeAttack.Instance.IsBusy);
         if (weapon != null && wantsAim != lastWantsAim)
         {
             weapon.SetAiming(wantsAim);

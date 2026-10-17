@@ -28,7 +28,6 @@ public class AmmoManager : MonoBehaviour
             else
             {
                 Instance = this;
-                DontDestroyOnLoad(gameObject);
             }
         }
 }

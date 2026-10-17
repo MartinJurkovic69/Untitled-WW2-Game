@@ -22,7 +22,9 @@ public class Combatant : MonoBehaviour, IDamageable
     public float aimHeight = 0.3f;
 
     public bool isDead {get; private set;}
+    public bool IsDead => isDead;
     public event System.Action<Combatant> Died;
+    public event System.Action<Combatant> Damaged;
 
     public Vector3 EyePosition => transform.position + Vector3.up * eyeHeight;
     public Vector3 AimPosition => transform.position + Vector3.up * aimHeight;
@@ -48,6 +50,7 @@ public class Combatant : MonoBehaviour, IDamageable
             Debug.Log($"{name} took {amount:F0} damage ({Mathf.Max(health, 0f):F0} HP left)", this);
 
         if (health <= 0f) Die();
+        else Damaged?.Invoke(this);
     }
     private void Die()
     {

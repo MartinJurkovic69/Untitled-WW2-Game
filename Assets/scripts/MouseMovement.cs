@@ -17,6 +17,7 @@ public class MouseMovement : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.IsPaused) return;
         if (ThrowablesManager.Instance != null && ThrowablesManager.Instance.isWheelOpen) return;
     
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
