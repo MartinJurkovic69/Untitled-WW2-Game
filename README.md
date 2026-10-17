@@ -10,8 +10,9 @@ A work-in-progress **WW2 first-person shooter** built in **Unity (HDRP)**.
 
 1. Open the itch.io page above and download the game (a `.zip` file).
 2. **Extract** the zip to a folder. Don't run the game from inside the zip.
-3. Open the folder and run **`Have Mercy on My Soul.exe`**.
-4. If Windows shows a "Windows protected your PC" (SmartScreen) message, click **More info → Run anyway**. The game is unsigned, which is why it appears.
+3. Open the folder and run **`Have Mercy on My Soul.exe`**. 
+4. In the main menu, click **Play** and choose a story. Right now only **Story 1** is playable, the others are marked as work in progress.
+5. If Windows shows a "Windows protected your PC" (SmartScreen) message, click **More info → Run anyway**. The game is unsigned, which is why it appears.
 
 **Requirements**
 
@@ -31,6 +32,18 @@ A work-in-progress **WW2 first-person shooter** built in **Unity (HDRP)**.
 | **E** | Pick up a weapon / restock ammo at an ammo box |
 | **G (hold)** | Open the throwables wheel, move the mouse to choose, release to equip |
 | **Q** | Throw the equipped throwable |
+| **V** | Melee attack (damages and shoves enemies back) |
+| **Esc** | Pause menu (resume, return to menu, exit to desktop) |
+
+## Stories
+
+This game is going to be a campaign/story game, like Battlefield V.
+These stories are in development:
+
+- **Russian Tragedy** - a story showing the sad state of the Russian state and army before and during the war.
+- **Two as One** - a story about two B-17 bombers that got locked together in an accident (credit to Yarnhub for introducing me to this story).
+- **Kesselrun** - the story of the closing of the Falaise Pocket from the German perspective.
+- ...and more that will be added :)
 
 ## How I built it
 
@@ -43,19 +56,24 @@ The game is made in **Unity 6** with the **High Definition Render Pipeline (HDRP
 - **Rendering and UI:** held weapons are drawn on top of the world with an HDRP Custom Pass so they don't clip into walls, and the HUD is built with Unity UI.
 - **Input:** Unity's Input System package.
 - **Tools:** Git and GitHub (with Git LFS for large assets), VS Code, and itch.io for publishing the Windows build.
+- **Combat** (`Combatant.cs`, `BulletDamage.cs`, `MeleeAttack.cs`): a shared team and health system for the player and enemies, bullet and grenade damage, and a melee attack that damages enemies and pushes them back.
+- **Menus** (`MainMenu.cs`, `PauseMenu.cs`): a main menu with story selection and an in-game pause menu with resume, return to menu and exit.
 
 ## Running the project from source
 
 1. Install **[Git LFS](https://git-lfs.com/)** and run `git lfs install` once.
 2. Clone the repository and run `git lfs pull`.
 3. Open the project folder with **Unity Hub** using **Unity 6**.
-4. Open the main scene from `Assets/Scenes` and press **Play**. The enemies need a baked NavMesh to walk.
+4. Open the `MainMenu` scene from `Assets/Scenes` and press **Play** to start from the menu, or open a story scene directly to test it. The enemies need a baked NavMesh to walk.
 
 ## Roadmap
 
 - [x] Weapons, ammo, aim down sights and weapon switching
 - [x] Throwables with a selection wheel
 - [x] Enemy vision, hearing, patrol/hold, orders and squads
+- [x] Main menu, story selection and pause menu
+- [x] Melee attack
 - [ ] Enemy weapons and classes, shooting, grenades and cover
 - [ ] Allies on the player's team
 - [ ] Real effects, animations, sound polish and levels
+- [ ] More playable stories
