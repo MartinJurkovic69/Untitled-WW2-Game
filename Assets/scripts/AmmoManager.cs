@@ -1,6 +1,4 @@
 using TMPro;
-using Unity.Hierarchy.Editor;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
