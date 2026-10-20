@@ -911,8 +911,8 @@ MonoBehaviour:
     button: {fileID: 238730817}
     label: {fileID: 1271580026}
     wiplabel: {fileID: 1798812990}
-    sceneName: B2BomberScene
-    avalible: 0
+    sceneName: B17BomberScene
+    avalible: 1
 --- !u!4 &1243456050
 Transform:
   m_ObjectHideFlags: 0

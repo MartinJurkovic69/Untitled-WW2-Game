@@ -41,8 +41,23 @@ public class StorySequence : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log($"[Story] Started with {(steps != null ? steps.Length : 0)} steps.", this);
+        if (steps == null || steps.Length == 0)
+        {
+            Debug.LogWarning($"{name}: Steps is empty. Add at least one step with a station.", this);
+            return;
+        }
+        for (int i = 0; i < steps.Length; i++)
+            {
+                if (steps[i].station == null)
+                    Debug.LogWarning($"[Story] Step {i} has no station assigned.", this);
+                else if (steps[i].station.stationCamera == null)
+                    Debug.LogWarning($"[Story] The station in step {i} has no camera assigned.", steps[i].station);
+            }
+    
         if (fadeGroup != null) fadeGroup.alpha = 1f;
         StartCoroutine(Transition(0));
+        
     }
     private void Update()
     {
@@ -88,6 +103,9 @@ public class StorySequence : MonoBehaviour
             Finish();
             yield break;
         }
+        BeginStep(next);
+        yield return Fade(0f);
+        transitioning = false;
     }
     private void BeginStep(int next)
     {
@@ -95,6 +113,7 @@ public class StorySequence : MonoBehaviour
         Step step = steps[index];
 
         current = step.station;
+        Debug.Log($"[Story] Step {index} '{step.name}' | station: {(current != null ? current.name : "NONE")} | camera: {(current != null && current.stationCamera != null ? current.stationCamera.name : "NONE")}", current);
         stepTime = 0f;
 
         if (step.timedEvents != null)
@@ -109,6 +128,7 @@ public class StorySequence : MonoBehaviour
     }
     private void EndCurrent()
     {
+        Debug.Log($"[Story] Step {index} ended.", this);
         if (current != null)
         {
             current.Completed -= OnStationCompleted;
@@ -119,6 +139,7 @@ public class StorySequence : MonoBehaviour
     }
     private void Finish()
     {
+        Debug.Log($"[Story] Finished, loading '{endSceneName}'.", this);
         onSequenceFinished.Invoke();
 
         if (!string.IsNullOrEmpty(endSceneName))

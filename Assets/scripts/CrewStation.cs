@@ -73,7 +73,10 @@ public class CrewStation : MonoBehaviour
     }
     private void SetPresentation(bool on)
     {
-        if (stationCamera != null) stationCamera.enabled = on;
+        if (stationCamera != null)
+        {
+            if (stationCamera.gameObject != gameObject) stationCamera.gameObject.SetActive(on);
+        }
         if (listener != null) listener.enabled = on;
         if (hudRoot != null) hudRoot.SetActive(on);
     }
